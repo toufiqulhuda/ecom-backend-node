@@ -5,6 +5,7 @@ const auth_router = require("./routes/auth.routes");
 const product_router = require('./routes/products.routes')
 const cart_router = require('./routes/cart.routes')
 const order_router = require('./routes/order.routes')
+const contact_router = require('./routes/contact.routes')
 require('dotenv').config()
 const app = express()
 app.use(cors())
@@ -32,6 +33,7 @@ app.use("/api/auth",auth_router)
 app.use("/api/product",product_router)
 app.use("/api/cart",cart_router)
 app.use("/api/order",order_router)
+app.use("/api/contact",contact_router)
 
 
 const db = require("./db");
